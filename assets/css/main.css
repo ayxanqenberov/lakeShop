@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+}
+header .header-up {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: white;
+  padding: 15px;
+}
+header .header-up .social-header {
+  display: flex;
+  gap: 20px;
+  color: white;
+}
+header .header-up .social-header i:hover {
+  animation: socialAnime 1s;
+  color: #E5BF4A;
+}
+header .header-up img {
+  width: 213px;
+  height: 74px;
+}
+header .header-up button {
+  border: 1px solid #E5BF4A;
+  padding: 11px 20px;
+  background-color: black;
+}
+header .header-up button a {
+  color: #E5BF4A;
+}
+header .header-up button:hover {
+  background-color: #E5BF4A;
+  color: white;
+  transition: all 0.5s;
+}
+header .header-up button:hover a {
+  color: white;
+}
+header .down-header {
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+header .down-header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+header .down-header nav ul #blog-list {
+  position: relative;
+}
+header .down-header nav ul #blog-list:hover #blog-div {
+  display: block;
+  transition: all ease-in-out 0.5s;
+}
+header .down-header nav ul #blog-list:hover #blog-div nav ul li:hover a {
+  color: #E5BF4A;
+}
+header .down-header nav ul #blog-list #blog-div {
+  background-color: white;
+  padding: 15px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -132px;
+  left: -5px;
+  width: 160px;
+  display: none;
+  z-index: 1;
+}
+header .down-header nav ul #blog-list #blog-div nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+header .down-header nav ul #blog-list #blog-div nav ul li a {
+  color: black;
+}
+header .down-header nav ul li {
+  position: relative;
+  padding: 0px 5px;
+}
+header .down-header nav ul li:hover a {
+  transition: all 0.5s;
+  color: #E5BF4A;
+}
+header .down-header nav ul li:hover::after {
+  display: block;
+  animation-fill-mode: forwards;
+  animation: navbarAnime 1s;
+}
+header .down-header nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #E5BF4A;
+  height: 1px;
+  left: 0;
+  bottom: -20px;
+  display: none;
+}
+header .down-header nav ul li a {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: white;
+}
+
+#home {
+  width: 100%;
+  height: 612px;
+  background-image: url(https://preview.colorlib.com/theme/cakeshop/assets/img/hero/h1_hero1.jpg.webp);
+  background-size: cover;
+  position: relative;
+}
+#home .home-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 400px;
+  gap: 30px;
+  bottom: 120px;
+  left: 100px;
+}
+#home .home-text h2 {
+  color: white;
+  font-size: 55px;
+  font-weight: 400;
+  width: 400px;
+  text-transform: capitalize;
+  font-family: "Poiret One";
+}
+#home .home-text button {
+  width: 150px;
+  padding: 16px;
+  background-color: #E5BF4A;
+}
+#home .home-text button:hover {
+  background-color: black;
+  border: 1px solid #E5BF4A;
+  transition: all 0.5s;
+}
+#home .home-text button:hover a {
+  color: #E5BF4A;
+}
+#home .home-text button a {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: black;
+}
+#home .fixed-bttn {
+  position: fixed;
+  bottom: 10px;
+  right: 5rem;
+}
+#home .fixed-bttn button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #E5BF4A;
+}
+#home .fixed-bttn button a {
+  color: white;
+}
+
+#product {
+  display: flex;
+  flex-wrap: wrap;
+}
+#product .our-products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: black;
+  padding: 30px;
+}
+#product .our-products h5 {
+  font-family: "Poiret One";
+  color: white;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+#product .our-products span {
+  color: #E5BF4A;
+  font-size: 19px;
+}
+
+footer {
+  background-color: black;
+  border-top: 1px solid grey;
+}
+footer .up-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+footer .up-footer .left-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 45%;
+}
+footer .up-footer .left-footer p {
+  color: white;
+}
+footer .up-footer .left-footer button {
+  padding: 7px;
+  background-color: black;
+  border: 1px solid white;
+}
+footer .up-footer .left-footer button i {
+  color: white;
+}
+footer .up-footer .left-footer button a {
+  color: white;
+}
+footer .up-footer .right-footer {
+  display: flex;
+  width: 40%;
+  gap: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .up-footer .right-footer .cards-footer {
+  line-height: 1.4;
+}
+footer .up-footer .right-footer .cards-footer i {
+  color: white;
+  font-size: 20px;
+}
+footer .up-footer .right-footer .cards-footer h3 {
+  color: #E5BF4A;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Poiret One";
+}
+footer .up-footer .right-footer .cards-footer p {
+  width: 220px;
+  color: white;
+}
+footer .up-footer .right-footer .cards-footer a {
+  color: white;
+}
+footer .down-footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid grey;
+}
+footer .down-footer p {
+  color: white;
+}
+
+@keyframes socialAnime {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes navbarAnime {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .down-header {
+    display: none;
+    justify-content: space-between;
+  }
+  .header-up img {
+    width: 200px;
+  }
+  .social-header {
+    display: none;
+  }
+  .social-header i {
+    display: none;
+  }
+  #home {
+    width: 100%;
+    background-size: cover;
+  }
+  #home .home-text {
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  #home {
+    width: 100%;
+  }
+  #home .home-text {
+    width: 200px;
+    right: 90px;
+  }
+  #home .home-text h2 {
+    width: 200px;
+    font-size: 40px;
+  }
+  .our-products div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+  footer .up-footer p {
+    display: none;
+  }
+  footer .up-footer .social-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100px;
+  }
+  footer .down-footer {
+    text-align: center;
+  }
+}
