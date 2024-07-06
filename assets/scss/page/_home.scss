@@ -67,18 +67,23 @@ header {
                 justify-content: center;
                 gap: 30px;
 
-                #blog-list{
+                #blog-list {
                     position: relative;
-                    &:hover{
-                        #blog-div{
-                            display: block;
-                            transition: all ease-in-out .5s;
-                            nav{
-                                ul{
-                                    li{
-                                        &:hover{
-                                            a{
-                                                color: #E5BF4A;
+
+                    &:hover {
+                        .parent-head {
+                            display: flex;
+
+                            #blog-div {
+                                transition: all ease-in-out .5s;
+
+                                nav {
+                                    ul {
+                                        li {
+                                            &:hover {
+                                                a {
+                                                    color: #E5BF4A;
+                                                }
                                             }
                                         }
                                     }
@@ -86,24 +91,35 @@ header {
                             }
                         }
                     }
-                    #blog-div{
-                        background-color: white;
-                        padding: 15px;
-                        border-radius: 2px;
+
+                    .parent-head {
+                        height: 122px;
                         position: absolute;
-                        bottom: -132px;
-                        left: -5px;
-                        width: 160px;
+                        align-items: end;
+                        width: 150px;
                         display: none;
-                        z-index: 1;
-                        nav{
-                            ul{
-                                display: flex;
-                                flex-direction: column;
-                                gap: 10px;
-                                li{
-                                    a{
-                                        color: black;
+
+                        #blog-div {
+                            background-color: white;
+                            padding: 15px;
+                            border-radius: 2px;
+                            position: absolute;
+                            // bottom: -132px;
+                            left: -5px;
+                            width: 160px;
+                            // display: none;
+                            z-index: 1;
+
+                            nav {
+                                ul {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+
+                                    li {
+                                        a {
+                                            color: black;
+                                        }
                                     }
                                 }
                             }
@@ -111,7 +127,7 @@ header {
                     }
                 }
 
-                li {
+                .list-item {
                     position: relative;
                     padding: 0px 5px;
 
@@ -197,17 +213,23 @@ header {
             }
         }
     }
-    .fixed-bttn{
+
+    .fixed-bttn {
         position: fixed;
         bottom: 10px;
         right: 5rem;
-        button{
+        scroll-behavior: smooth;
+
+        button {
             width: 35px;
             height: 35px;
             border-radius: 50%;
             background-color: #E5BF4A;
-            a{
+            scroll-behavior: smooth;
+
+            a {
                 color: white;
+                scroll-behavior: smooth;
             }
         }
     }
@@ -216,6 +238,7 @@ header {
 #product {
     display: flex;
     flex-wrap: wrap;
+
     .our-products {
         display: flex;
         justify-content: space-around;
@@ -342,48 +365,54 @@ footer {
 }
 
 //tablet
-@media (max-width: 992px){
-    .down-header{
+@media (max-width: 992px) {
+    .down-header {
         display: none;
         justify-content: space-between;
     }
-    .header-up{
-        img{
+
+    .header-up {
+        img {
             width: 200px;
         }
     }
-    .social-header{
+
+    .social-header {
         display: none;
-        i{
+
+        i {
             display: none;
         }
     }
-    #home{
-       width: 100%;
-       background-size: cover;
-       .home-text{
-        justify-content: center;
-       }
+
+    #home {
+        width: 100%;
+        background-size: cover;
+
+        .home-text {
+            justify-content: center;
+        }
     }
 }
 
 //phone
 
-@media (max-width: 600px){
-    
-    #home{
-        .home-text{
+@media (max-width: 600px) {
+
+    #home {
+        .home-text {
             width: 200px;
             right: 90px;
-            h2{
+
+            h2 {
                 width: 200px;
                 font-size: 40px;
             }
         }
-        width: 100%;
     }
-    .our-products{
-        div{
+
+    .our-products {
+        div {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -391,19 +420,22 @@ footer {
             height: auto;
         }
     }
-    footer{
-        .up-footer{
-            p{
+
+    footer {
+        .up-footer {
+            p {
                 display: none;
             }
-            .social-footer{
+
+            .social-footer {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
                 width: 100px;
             }
         }
-        .down-footer{
+
+        .down-footer {
             text-align: center;
         }
     }

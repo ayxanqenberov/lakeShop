@@ -58,46 +58,53 @@ header .down-header nav ul {
 header .down-header nav ul #blog-list {
   position: relative;
 }
-header .down-header nav ul #blog-list:hover #blog-div {
-  display: block;
+header .down-header nav ul #blog-list:hover .parent-head {
+  display: flex;
+}
+header .down-header nav ul #blog-list:hover .parent-head #blog-div {
   transition: all ease-in-out 0.5s;
 }
-header .down-header nav ul #blog-list:hover #blog-div nav ul li:hover a {
+header .down-header nav ul #blog-list:hover .parent-head #blog-div nav ul li:hover a {
   color: #E5BF4A;
 }
-header .down-header nav ul #blog-list #blog-div {
+header .down-header nav ul #blog-list .parent-head {
+  height: 122px;
+  position: absolute;
+  align-items: end;
+  width: 150px;
+  display: none;
+}
+header .down-header nav ul #blog-list .parent-head #blog-div {
   background-color: white;
   padding: 15px;
   border-radius: 2px;
   position: absolute;
-  bottom: -132px;
   left: -5px;
   width: 160px;
-  display: none;
   z-index: 1;
 }
-header .down-header nav ul #blog-list #blog-div nav ul {
+header .down-header nav ul #blog-list .parent-head #blog-div nav ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-header .down-header nav ul #blog-list #blog-div nav ul li a {
+header .down-header nav ul #blog-list .parent-head #blog-div nav ul li a {
   color: black;
 }
-header .down-header nav ul li {
+header .down-header nav ul .list-item {
   position: relative;
   padding: 0px 5px;
 }
-header .down-header nav ul li:hover a {
+header .down-header nav ul .list-item:hover a {
   transition: all 0.5s;
   color: #E5BF4A;
 }
-header .down-header nav ul li:hover::after {
+header .down-header nav ul .list-item:hover::after {
   display: block;
   animation-fill-mode: forwards;
   animation: navbarAnime 1s;
 }
-header .down-header nav ul li::after {
+header .down-header nav ul .list-item::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -107,7 +114,7 @@ header .down-header nav ul li::after {
   bottom: -20px;
   display: none;
 }
-header .down-header nav ul li a {
+header .down-header nav ul .list-item a {
   text-transform: uppercase;
   font-size: 13px;
   color: white;
@@ -159,15 +166,18 @@ header .down-header nav ul li a {
   position: fixed;
   bottom: 10px;
   right: 5rem;
+  scroll-behavior: smooth;
 }
 #home .fixed-bttn button {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   background-color: #E5BF4A;
+  scroll-behavior: smooth;
 }
 #home .fixed-bttn button a {
   color: white;
+  scroll-behavior: smooth;
 }
 
 #product {
@@ -301,9 +311,6 @@ footer .down-footer p {
   }
 }
 @media (max-width: 600px) {
-  #home {
-    width: 100%;
-  }
   #home .home-text {
     width: 200px;
     right: 90px;
